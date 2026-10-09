@@ -13,7 +13,7 @@ class ChatRequest(BaseModel):
     message: str
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 async def root():
     return {
         "message": "Vehicle Lead Agent is running"
